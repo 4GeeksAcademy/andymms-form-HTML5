@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container text-center my-5">
+        <h1>Payment form example</h1>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Click Here to pay!
+        </button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Payment form example</b></h1>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Some fields are required!
+                    </div>
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row mb-2">
+                                <div class="col-5">
+                                    <label for="Card" class="form-label"><b>Card #</b></label>
+                                    <input type="text" class="form-control" id="Card" placeholder="XXXX-XXXX-XXXX-XXXX">
+                                </div>
+                                <div class="col-3">
+                                    <label for="CVC" class="form-label"><b>CVC #</b></label>
+                                    <input type="text" class="form-control" id="CVC" placeholder="0000">
+                                </div>
+                                <div class="col-4">
+                                    <label for="Amount" class="form-label"><b>Amount $</b></label>
+                                    <input type="text" class="form-control" id="Amount" placeholder="0.00">
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-6">
+                                    <label for="First-Name" class="form-label"><b>First Name</b></label>
+                                    <input type="text" class="form-control" id="First-Name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="Last-Name" class="form-label"><b>Last Name</b></label>
+                                    <input type="text" class="form-control" id="Last-Name">
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-6">
+                                    <label for="City" class="form-label"><b>City</b></label>
+                                    <input type="text" class="form-control" id="City">
+                                </div>
+                                <div class="col-3">
+                                    <label for="State" class="form-label"><b>State</b></label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Pick a state</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Orlando">Orlando</option>
+                                        <option value="Hawai">Hawai</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <label for="Postal-code" class="form-label"><b>Postal code</b></label>
+                                    <input type="text" class="form-control" id="Postal-code" placeholder="00000">
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3">
+                                    <label for="Accepted-Card" class="form-label"><b>We accept</b></label>
+                                    <div class="row bg-secondary text-white p-2 rounded align-items-cemter">
+                                        <div class="form-check col-3">
+                                            <input class="form-check-input custom-radio" type="radio"
+                                                name="Payment-method" id="Card-Visa">
+                                            <label class="form-check-label" for="Card-Visa">
+                                                <i class="fa-brands fa-cc-visa"></i>
+                                            </label>
+                                        </div>
+                                        <div class="form-check col-3">
+                                            <input class="form-check-input custom-radio" type="radio"
+                                                name="Payment-method" id="Card-Mastercard">
+                                            <label class="form-check-label" for="Card-Mastercard">
+                                                <i class="fa-brands fa-cc-mastercard"></i>
+                                            </label>
+                                        </div>
+                                        <div class="form-check col-3">
+                                            <input class="form-check-input custom-radio" type="radio"
+                                                name="Payment-method" id="Card-AMEX">
+                                            <label class="form-check-label" for="Card-AMEX">
+                                                <i class="fa-brands fa-cc-amex"></i>
+                                            </label>
+                                        </div>
+                                        <div class="form-check col-3">
+                                            <input class="form-check-input custom-radio" type="radio"
+                                                name="Payment-method" id="Card-Discover">
+                                            <label class="form-check-label" for="Card-Discover">
+                                                <i class="fa-brands fa-cc-discover"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 ms-auto">
+                                    <label for="Notes-help" class="form-label"><b>Message</b></label>
+                                    <textarea class="form-control" id="Notes-help" rows="3"></textarea>
+                                    <div id="Notes-help" class="form-text">Add any notes here.</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+
+    .custom-radio {
+        border: none; 
+        background-color: rgb(214, 214, 214); 
+    }
+
+    .custom-radio:checked {
+        background-color: #29313a;  
+        border-color: #29313a; 
+    } 
